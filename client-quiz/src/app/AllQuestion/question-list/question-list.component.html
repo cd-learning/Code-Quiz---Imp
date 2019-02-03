@@ -1,0 +1,78 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title style="margin-left:70px"></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="questionForm" (ngSubmit)="getQuestionList()">
+      <table style="margin-left:80px" class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-select  placeholder="Select Quiz Category" formControlName="selectQuestion" aria-required="true">
+                <mat-option *ngFor="let data of getCatInfo" [value]="data.categoryId">
+
+                  {{ data.categoryName }}
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td> &nbsp; <button  type="submit" class="btn-floating btn-lg purple-gradient my-0 waves-effect waves-light" mat-fab color="accent" >Submit</button>
+         <!-- // (click)="getQuestionList() -->
+           
+             
+        </tr>
+        <span *ngIf="submitted  && questionForm.get('selectQuestion').hasError('required') ">
+
+          please Select Question Category ...
+
+         </span>
+
+        <tr>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </form>
+   
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+</mat-card>
+<div *ngIf="this.getQuestionLits.length > 0 ">
+  <mat-card class="example-card1" id="questionDisplay">
+    <mat-card-header>
+      <mat-card-title style="margin-left:70px"></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <h6 style="text-align: center">----- Select Question {{this.categorySelectvalue }} -----</h6>
+        <table style="margin-left:80px" class="example-full-width" cellspacing="0">
+          <tr *ngFor="let data of this.getQuestionLits | paginate: { itemsPerPage: 5, currentPage: p } ">
+            <td>
+              <label>
+                <mat-checkbox [checked]="testBoolean" class="example-margin" (change)="change(data.questionId)"></mat-checkbox>
+                &nbsp; {{ data.questionText }}
+              </label>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
+  <button style="margin-left:770px" type="submit" mat-raised-button (click)="temp()" color="primary">Finished Select
+    Questions </button>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<div *ngIf="this.visible === true">
+  <mat-card class="example-card1" id="questionDisplayElse">
+      <mat-card-header>
+        <mat-card-title style="margin-left:70px"></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form">
+          <h2 style="color:red ; font-family: sans-serif">There is no records found !!!  Select other category</h2> 
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+    </mat-card>   
+  </div>

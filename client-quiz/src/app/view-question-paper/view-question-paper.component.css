@@ -1,0 +1,23 @@
+.btn{
+    margin-left: 90px;
+}
+.col-md-2{
+    margin:  -20px 0px 0px 450px
+}
+.col-md-10{
+         width:850px;
+         word-wrap: break-word;
+         text-decoration-skip: unset
+        
+}
+.container{
+    margin : 50px 0px 0px 0px;
+}
+
+.btn-rounded {
+    border-radius: 1em;
+    width: 44px;
+    height: 37px;
+    font-size: 11px;
+    
+}

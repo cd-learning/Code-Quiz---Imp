@@ -1,0 +1,26 @@
+.sidenav-container {
+  height: 100%;
+}
+.sidenav {
+  width: 200px;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#cursorGrab{
+  cursor: -webkit-grab; cursor: grab;
+}
+.mat-toolbar.mat-primary{
+  background:hsl(197, 86%, 33%);
+} 
+.mat-drawer-inner-container{
+   width:250px;
+}
+a{
+  font-size: 10px;
+}

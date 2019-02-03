@@ -1,0 +1,25 @@
+mat-form-field{
+    margin-left: 30px;
+    width: 450px;
+    margin-left: -10px;
+    margin-top: 20px;
+}.container{
+    margin-top: 80PX;
+    width: 500px;
+   
+ }.btn{
+    background-color: #673ab7;
+    width: 150px;
+    margin-left:  -10px;
+}
+.alert{
+    background-color: #673ab7;
+        color: #ffff;
+    text-align: center;
+    
+}
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+    width: 162px;
+}
