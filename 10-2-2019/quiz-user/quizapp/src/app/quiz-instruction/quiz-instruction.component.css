@@ -1,0 +1,38 @@
+.example-card{
+    margin-top: 87px;
+    margin-left: 200px;
+    height: 500px;
+    width: 1000px;
+    font-size: 18pt;
+    margin-bottom: 87px;
+
+}
+#btnSubmit
+{
+    margin-top: -193px;
+    margin-left: 783px;
+}
+
+.btn-success{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-left: 143px;
+}
+
+.example-card-instruction{
+    margin-top: 30px;
+    
+    height: 500px;
+    font-size: 18pt;
+    width: 540px;
+    margin-bottom: 40px;
+}
+h6{color:white}
+.example-card-instruction-start{
+    margin: 130px 30px 30px 30px;
+
+    background-color: gray;
+    width: 400px;
+    height: 200px;
+}

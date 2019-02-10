@@ -1,0 +1,35 @@
+<app-header></app-header>
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0" style="margin-left: -90px">Quiz Login</h2>
+    <hr class="star-dark mb-5" style="margin-left:  390px">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+        <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+        <form name="sentMessage">
+          <div class="col-md-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter Email Address:</mat-label>
+              <input matInput placeholder="Entar Email Address:" name="userEmailId" [(ngModel)]="loginObj.userEmailId">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <!-- <mat-hint>rohit.parmar@gmial.com</mat-hint> -->
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter Password</mat-label>
+              <input matInput type="password" name="userPassword" [(ngModel)]="loginObj.userPassword" placeholder="Enter Password">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <!-- <mat-hint>******** 8 Character </mat-hint> -->
+            </mat-form-field>
+          </div>
+          <div>
+            <button class="submitBtn" (click)="Login()" style="margin-left: 13px;width:100px" type="submit" class="btn btn-primary btn-xl"
+              id="sendMessageButton">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

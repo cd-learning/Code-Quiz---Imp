@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div mat-dialog-content style="overflow: hidden;">
+                <nga-ng2-gauge [max]="100" [input]="input" ></nga-ng2-gauge>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 150px">
+            <h3 style="text-align: center">Your Score :</h3>
+            <h2 style="text-align: center"><strong>{{input}} </strong></h2>
+            <div *ngIf="input === 0 ">
+                <h3 href="#"><a>Please Try Again</a>
+                </h3>
+            </div>
+            <div *ngIf="input == 50 ">
+                <h3>Pass</h3>
+            </div>
+            <div *ngIf="input < 50 ">
+                <h3 style="color:red">Fail</h3>
+                <h6 style="color:red">Try Again !!!</h6>
+            </div>
+            <div *ngIf="input > 60 && input <= 70 ">
+                <h3 style="color:green">Pass</h3>
+            </div>
+            <div *ngIf="input > 70  && input <= 80 ">
+                <h3 style="color:blue">Good Performance</h3>
+            </div>
+            <div *ngIf="input > 80  && input <= 90">
+                <h3 style="color:brown">Very Good Performance</h3>
+            </div>
+            <div *ngIf="input > 90 ">
+                <h3 style="color:darkgoldenrod">Excellent Performance</h3>
+            </div>
+            <div mat-dialog-actions>
+                <button mat-button style="width: 300px;margin-left: 150px" class="btn btn-primary" (click)="resultSub()">Finish</button>
+            </div>
+        </div>
+    </div>
+</div>

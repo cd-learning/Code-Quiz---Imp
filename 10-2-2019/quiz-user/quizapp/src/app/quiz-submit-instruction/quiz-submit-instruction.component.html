@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Basic Instruction to the Quiz  </h1>
+<div mat-dialog-content> 
+ 
+</div>
+<div mat-dialog-actions>
+  <div class="row">
+
+    <ul>
+      <li>
+          Click on Geen Button Get Result of the Quiz ...
+      </li>
+      <li>
+        Click On Red Button then Close  to the Quiz  Window then continue quiz ...
+      </li>
+    </ul>
+     <div class="col-md-6" style="padding : 40px">
+        <button mat-button  class="btn btn-success" (click)="resultSub()" >Submit Quiz</button>
+ 
+     </div>
+     <div class="col-md-6" style="padding : 40px" *ngIf="timerOverValue != 0">
+       
+               <button mat-button  class="btn btn-danger" (click)="close()" >Close Quiz</button>
+
+      </div>
+      
+
+  </div>
+ 
+  </div>
+
+
+ 

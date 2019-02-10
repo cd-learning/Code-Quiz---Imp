@@ -1,0 +1,53 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar> Quiz</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item  [routerLink]="['/addQuestions']" style="font-size: 15px;"> <i class="material-icons">
+        question_answer &nbsp;
+        </i>Add question</a>
+        
+      <a mat-list-item   [routerLink]="['/viewCategory']" ><i class="material-icons">
+        note_add &nbsp;
+        </i>
+        Add  Question Category</a>    
+      <a mat-list-item   [routerLink]="['/addUser']" ><i class="material-icons">
+        person_add &nbsp;
+        </i>Add User </a>     
+       
+      <a mat-list-item   [routerLink]="['/displayQuestion']" > 
+        <i class="material-icons">
+        view_list &nbsp;
+        </i>Display Question </a>
+      
+      <a mat-list-item   [routerLink]="['/attemptQuestions']" > <i class="material-icons">
+        bookmarks &nbsp;
+        </i> Attempt Questions  </a>
+      
+
+      <a mat-list-item   [routerLink]="['/progress']" >  
+        <i class="material-icons">
+          trending_up &nbsp;
+          </i>  Progress Chart </a>
+      
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Quiz Application</span>
+    </mat-toolbar>
+ 
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

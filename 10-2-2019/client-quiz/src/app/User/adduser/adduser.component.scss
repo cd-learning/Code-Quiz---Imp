@@ -1,0 +1,19 @@
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
+mat-card{
+    margin: 20px 20px 0px 20px;
+    width: 600px;
+}
+.example-card{
+  margin: 100px 0px 0px 260px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    position: "absolute";
+    text-align: center;
+display:table-cell;
+vertical-align:middle;
+}

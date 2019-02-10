@@ -1,0 +1,93 @@
+ 
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title style="margin-left:70px">Add  Question</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+<div class="container">
+  <form #categoryTypeForm="ngForm" (ngSubmit)="categoryTypeForm.form.valid && submitted" novalidate  >   
+    <div class="row">
+      <div class="col-md-2">
+          <mat-form-field>
+              <mat-select placeholder="Select Quiz Category"  #questionCategory="ngModel"  required   [(ngModel)]="question.questionCategory" name="categoryName"  >
+                <mat-option *ngFor="let data of getCatInfo"  [value]="data.categoryId">
+                  {{ data.categoryName }}
+                </mat-option>
+              </mat-select>         
+             
+            </mat-form-field>  
+            <div *ngIf="questionCategory.invalid && categoryTypeForm.submitted "> 
+                <span style="color:#fff">
+                   Please Select Category
+               </span>  
+                   </div>
+      </div>    
+      <div class="col-md-2">&nbsp;</div>
+      <div class="col-md-2">
+          <mat-form-field>
+              <mat-select placeholder="Select Quiz Category" #subcategory1="ngModel"   required  [(ngModel)]="question.subcategory" name="subcategory">
+                <mat-option *ngFor="let data of subcategory" [value]="data">
+                  {{ data }}
+                </mat-option>
+              </mat-select>              
+            </mat-form-field>
+            <div *ngIf="subcategory1.invalid && categoryTypeForm.submitted "> 
+                <span style="color:#fff">
+                  please Select Sub-category
+                </span>
+             </div>
+        </div>
+       <div class="col-md-12">
+              <div>
+      <mat-checkbox class="example-margin"  [(ngModel)]="theCheckbox " name="theCheckbox"  (change)="toggleVisibility($event)" [value]="this.checkCheck"  [checked]="checkCheck" >  </mat-checkbox>
+            </div>
+              <div *ngIf="this.checkCheck ===  true">
+                  <mat-form-field class="example-full-width">
+                      <textarea  matInput     name="questionText"  #questionText="ngModel"   required  [(ngModel)]="question.questionText" placeholder="Enter Question ? : "></textarea>
+                    </mat-form-field>
+                 <div *ngIf="categoryTypeForm.submitted && questionText.invalid">
+                   <div *ngIf="questionText.errors.required" style="color:white">
+                     Please Enter Question Text
+                   </div>
+                 </div>
+                    &nbsp; <button style="margin-left:30px " type="button" (click)="addfield()" mat-button class="btn btn-info btn-rounded waves-effect waves-light">+</button>
+              </div>
+              <div *ngIf="this.checkCheck  == false">
+                  <mat-form-field class="example-full-width">
+                      <input  matInput    name="questionText"   required [(ngModel)]="question.questionText" placeholder="Enter Question ? : ">
+                    </mat-form-field>
+                    <div *ngIf="categoryTypeForm.submitted && questionCategory.invalid">
+                        <div *ngIf="questionCategory.errors.required" style="color:white">
+                          Please Enter questionText
+                        </div>
+                    </div>
+                    &nbsp; <button type="button" (click)="addfield()" mat-button class="btn btn-info btn-rounded waves-effect waves-light"> +</button>
+              </div>
+      </div>
+      <div class="col-md-9">
+        <div *ngFor="let ans of question.options; let i=index">
+          <mat-form-field class="example-full-width">                                                                   
+            <input matInput placeholder="Enter option content" #option="ngModel"   required  name="answerText" [(ngModel)]="ans.answerText">
+          </mat-form-field>
+          <div *ngIf="categoryTypeForm.submitted && option.invalid">
+              <div *ngIf="option.errors.required" style="color:white">
+                Please Enter Option Value {{ i + 1 }}
+              </div>
+          </div>
+            <div *ngIf="question.subcategory === 'Single Question Single Answer'" >
+             <mat-radio-button class="example-margin"    (click)="setradiocorrect(ans)"   name="answerCorrect"    [(ngModel)]="ans.correct">Correct</mat-radio-button>
+           </div> 
+           <div *ngIf="question.subcategory === 'Single Question Multiple Answer'">
+            <mat-checkbox class="example-margin" (click)="setchkcorrect(ans)" name="answerCorrect{{i}}"  [(ngModel)]="ans.correct" >Correct</mat-checkbox>
+          </div>
+        </div>
+        <div style="margin: 0px 0px 0px  400px">
+          <button  class="btn btn-success btn-rounded waves-effect waves-light" (click)="saveFunction()" [disabled]="!categoryTypeForm.valid" >Save</button> &nbsp;
+          <button style="font-size: 12px;" class=" btn btn-danger btn-rounded waves-effect waves-light" (click)="resetVal(categoryTypeForm)" >Cancel</button> &nbsp;
+        </div>
+        </div>
+      </div>
+    </form>
+</div>
+</mat-card-content>
+</mat-card>

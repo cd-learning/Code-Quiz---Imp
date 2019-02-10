@@ -1,0 +1,80 @@
+
+  <div class="container" id="leftInstruction" *ngIf="quizInstructionShowHide == false">
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <mat-card class="example-card-instruction">
+          <mat-card-header>
+            <mat-card-title>
+              <h4>Instructions</h4>
+            </mat-card-title><br /><br />
+          </mat-card-header>
+          <mat-card-content>
+            <h2>Instructions</h2>
+            <p>This quiz consists of multiple-choice questions. To be successful with the quizzes, it’s important to
+              thoroughly read all technology quiz like (c,c++,java....) in the quiz. It will also be extremely useful
+              to study / interview preparation the key terms at the end of the quiz review the Test Your Knowledge
+              activity at the end of the quiz. Keep the following in mind:</p>
+
+            <ul>
+              <li><strong> Attempts</strong> - You will have one day one attempts for this quiz with your score being
+                display in screen/your account result section in your account profile.</li>
+              <li><strong> Timing </strong>- You will need to complete each of your attempts in one sitting, as you are
+                allotted time to complete each attempt quiz.</li>
+              <li><strong>Answer </strong> - You may review your answer-choices and compare them to the correct answers
+                after your final attempt.</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+ 
+      <div class="col-md-6">
+        <mat-card class="example-card-instruction">
+          <mat-card-header>
+            <mat-card-title>
+              <h4>Instructions</h4>
+            </mat-card-title><br /><br />
+          </mat-card-header>
+          <mat-card-content>
+            To start, click the "Take the Quiz" button. When finished, click the "Submit Quiz" button.
+            <mat-card class="example-card-instruction-start" style="margin-top: 50px;
+            margin-left: 60px;">
+              <mat-card-header>
+                <mat-card-title>
+                   <h6 style="color:white;margin-left: -16px"><strong>Click the Submit Quiz Button Then Start Quiz...</strong></h6>
+                </mat-card-title><br /><br />
+              </mat-card-header>
+              <mat-card-content>
+                <mat-icon style="color:white;margin-left:174px"></mat-icon><br />
+                <button class="btn btn-success"   type="submit" (click)="startQuiz()">Start
+                  Quiz</button>
+                <h5 style="color:white"> <br>!!! best of luck !!!</h5>
+              </mat-card-content>
+            </mat-card>
+
+
+
+
+          </mat-card-content>
+        </mat-card>
+
+
+        </div>
+
+      </div>
+
+
+
+
+  </div>
+
+
+  <div *ngIf="quizInstructionShowHide == true" >
+    <app-take-test id="test"></app-take-test> 
+  </div>
+
+
+
+
+

@@ -1,0 +1,33 @@
+.mat-card{ 
+    margin: 130px 0px 0px 400px;
+    width: 500px;
+    background-color: #838d96;
+    height: 350px; 
+}
+.btn{
+    width: 100px;
+    background-color: #838d96;  
+    color:black;
+}
+
+.outrerLogin{
+    background-color: #bdc5cf;
+    height: 100%;
+}.example-full-width{
+    width: 300px;
+   
+}
+  
+h2{
+    color: black;
+}
+.mat-focused .placeholder {
+    color:black;
+}
+
+.active {
+    background: green;
+}
+.notactive{
+    background : red;
+}

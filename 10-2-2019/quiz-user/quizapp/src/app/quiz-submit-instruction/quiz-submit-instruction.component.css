@@ -1,0 +1,19 @@
+.mat-dialog-container{
+    overflow: hidden;
+}
+
+
+
+.mat-dialog-container {
+    display: block;
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 71%;
+    height: 120%;
+    min-height: inherit;
+    max-height: inherit;
+    overflow: hidden;
+}

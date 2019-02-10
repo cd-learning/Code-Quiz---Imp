@@ -1,0 +1,167 @@
+<!-- <div *ngIf="this.listOfTestImagesHide == false">
+  <section class="portfolio" id="portfolio">
+    <div class="container"><a (click)="question('test')"  >Take Test</a>
+      <h2 class="text-center text-uppercase text-secondary mb-0"> !!! Quiz !!! </h2>
+      <hr class="star-dark mb-5">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/bootstrap.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/css.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question(26)">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/python.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/angular.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/mogodb.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/node.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/c.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question(4)">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/cplus.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/dotnet.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question(23)">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/java.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/sql.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="portfolio-item d-block mx-auto" (click)="question()">
+            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                <i class="fas fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/quiz-images/jquery.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div> -->
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+   <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h4 style="margin-left: 450px">check Attempt quiz</h4>
+      </mat-card-title><br /><br />
+    </mat-card-header>
+    <mat-card-content>
+            
+      <form class="example-form">
+        <div *ngFor="let data of this.fetchPaperQuestion  | paginate: { itemsPerPage: 1, currentPage: p }; let i = index  ">
+          <P style="font-size: 13pt"> <strong style="margin-left: 40px"> Question </strong> {{p}} : {{
+            data.questionText }}</P>
+          <mat-radio-group>
+            <div *ngFor="let ans of data.options" style="margin-left: 100px">
+              <mat-radio-button style="font-size: 13pt"   name="" value="{{ ans .answerText}}">{{ans.answerText}}</mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
+      </form>
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  <div *ngIf="p == this.fetchPaperQuestion.length">
+
+      <button id="btnSubmit" class="btn btn-primary"  type="submit"  >Submit Quiz</button>
+
+  </div>
+  </mat-card>
+ 

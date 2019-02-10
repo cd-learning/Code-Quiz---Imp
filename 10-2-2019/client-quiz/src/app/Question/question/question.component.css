@@ -1,0 +1,62 @@
+.example-full-width{
+    width: 367px;
+    margin-top: 30px;
+}
+.container{
+    margin-left:50px;
+    color: #673AB8;
+}
+.btn    {
+    background-color: #673AB8;
+    color: white;
+    width: 114px;
+    height: 43px;
+} 
+ 
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+     border-color: #d9534f;
+    
+}
+.btn-success{
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+ 
+textarea{
+    height: 150px;
+}
+.example-card{
+    width: 600px;
+    margin: 20px 0px 0px 250px;
+}
+
+mat-card{
+    background-color:  #303030;
+    color: white;
+}
+.mat-form-field-infix{
+    color:  #fff;
+}
+mat-select {
+    color: black;
+} 
+mat-form-field{
+    color: #fff;
+}
+mat-option{
+    color: white;
+}
+
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
+ 
+#btn-round-same-size{
+    width: 20px;
+    height: 30px;
+}

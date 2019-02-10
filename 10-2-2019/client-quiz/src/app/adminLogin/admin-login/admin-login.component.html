@@ -1,0 +1,55 @@
+<div class="outrerLogin">
+ &nbsp;
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title style="margin-left:70px;margin-bottom: 20px"><h2><strong> Quiz Admin Login </strong></h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="adminLoginForm" (ngSubmit)="login()">
+        <table style="margin-left:80px" class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">                                                                   
+                <input matInput  formControlName="username"   placeholder="Enter User Name :">
+              </mat-form-field>
+                <span *ngIf="submitted && adminLoginForm.get('username').hasError('required')" style="color:#fff">
+                <h6>  Please Enter username</h6>
+               </span>
+
+               <span *ngIf="submitted && adminLoginForm.get('username').hasError('pattern')" style="color:#fff">
+                <h6>Only Character Allow No special symbol allowe......</h6>
+               </span>
+            </td>
+          </tr>
+          <tr>
+          <td>  <mat-form-field class="example-full-width">                                                                   
+            <input matInput type="password" formControlName="password" placeholder="Enter Password"/>
+          
+
+
+          </mat-form-field>
+
+          <span  *ngIf="submitted && adminLoginForm.get('password').hasError('required')"> <h6 style="color:#fff">Please Enter Password</h6></span>
+             
+          <span *ngIf="submitted && adminLoginForm.get('password').hasError('pattern')">
+            <h6>Please Enter Strong Password Like "--Abc@778#" !!!</h6>
+
+          </span>
+
+         </td>
+        </tr></table> 
+        <button style="margin:20px 0px 0px 80px" type="submit" class="btn" mat-raised-button>Login</button>
+      </form>
+      
+ 
+<h3 style="color:red"> {{adminLoginForm.status}} </h3>
+  
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+  
+ 
+    </mat-card-actions>
+  </mat-card>
+  
+</div>

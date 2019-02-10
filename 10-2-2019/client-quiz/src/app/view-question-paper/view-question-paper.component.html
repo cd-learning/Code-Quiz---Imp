@@ -1,0 +1,96 @@
+<!-- <div class="container">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h4 style="margin-left: 450px">Choice Question Paper</h4>
+    </mat-card-title><br /><br />
+  </mat-card-header>
+  <mat-card-content> 
+    <form class="example-form">
+      <div *ngFor="let data of this.fetchPaperQuestion  | paginate: { itemsPerPage: 10, currentPage: p }; let i = index  ">
+         <div class="rows">     
+             <div  class="col-md-10">    
+             <p> <strong> Question </strong></p> {{i+1}} :  {{ data.questionText }}  
+            </div>  
+            <div class="col-md-2">
+                <button   class="btn   btn-danger btn-rounded" (click)="deleteQuestion(data)"> <i _ngcontent-c13="" class="material-icons" style="margin: -6px 0px 0px -12px;" > delete </i>  </button>&nbsp;
+            </div> 
+       </div>
+    </div> 
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+<div *ngIf="p == this.fetchPaperQuestion.length">
+     <button id="btnSubmit" class="btn btn-primary"  type="submit"  >Submit Quiz</button>
+ </div>
+</mat-card>
+</div> -->
+
+
+
+
+<div class="container"  >
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h4 style="margin-left: 450px">Choice Question Paper</h4>
+        </mat-card-title><br /><br />
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+        <form class="example-form">
+            <div class="row" *ngFor="let data of this.fetchPaperQuestion  | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+                <div class="col-sm-2">
+                  <p>Question  : {{ i +1}}</p>   
+                </div>
+                
+                <div class="col-sm-8" style="margin-left: -50px">
+                   <p> {{ data.questionText }}</p> 
+                  </div>
+                 <div class="col-sm-2">
+                    <button   class="btn   btn-danger btn-rounded" (click)="deleteQuestion(data)"> <i _ngcontent-c13="" class="material-icons" style="margin: -6px 0px 0px -12px;" > delete </i>  </button>&nbsp;
+
+                 </div> 
+
+            </div> 
+          </form>
+      
+    </div> 
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+<div *ngIf="p == this.fetchPaperQuestion.length">
+     <button id="btnSubmit" class="btn btn-primary"  type="submit"  >Submit Quiz</button>    
+ </div>
+</mat-card>
+</div>  
+ 
+
+<div class="container" >
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>
+          <h4 style="margin-left: 450px">Choice Question Paper</h4>
+            </mat-card-title><br /><br />
+      </mat-card-header>
+      <mat-card-content>
+        <div class="container"> 
+
+          <h3>Please Select Question <a  [routerLink]="['/displayQuestion']" style="color:white;font-weight: bold">Click Hear</a></h3>
+          
+        </div> 
+            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+     </mat-card>
+    </div>  
+     
+
+
+
+
+

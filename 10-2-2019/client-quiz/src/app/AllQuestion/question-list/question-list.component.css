@@ -1,0 +1,25 @@
+.mat-card{
+    margin:40px;
+    width: 80%;
+    height: 120px;
+}
+
+#questionDisplay{
+    margin:40px;
+    width: 80%;
+    height: 400px;
+}
+ 
+#questionDisplayElse{
+    margin:40px;
+    width: 80%;
+    height: 200px;
+}
+
+
+.mat-card{
+    background-color:#303030;
+   
+}
+
+  
